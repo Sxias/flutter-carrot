@@ -1,5 +1,6 @@
 import 'package:carrotapp/core/my_util.dart';
 import 'package:carrotapp/models/product.dart';
+import 'package:carrotapp/theme.dart';
 import 'package:flutter/cupertino.dart';
 
 class ListItem extends StatelessWidget {
@@ -18,7 +19,7 @@ class ListItem extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image.network(
-                "https://picsum.photos/id/237/200/300", // p.urlToImage
+                "https://picsum.photos/id/237/200/300", // p.urlToImage in mobile
                 width: 115,
                 fit: BoxFit.cover,
               ),
@@ -29,9 +30,18 @@ class ListItem extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("${p.title}"),
-                    Text("${p.address} • ${p.publishedAt}"),
-                    Text("${p.price.toMoney()}원"),
+                    Text(
+                      "${p.title}",
+                      style: textTheme().displayLarge,
+                    ),
+                    Text(
+                      "${p.address} • ${p.publishedAt}",
+                      style: textTheme().bodyMedium,
+                    ),
+                    Text(
+                      "${p.price.toMoney()}원",
+                      style: textTheme().displayMedium,
+                    ),
                     Spacer(),
                     Row(
                       children: [

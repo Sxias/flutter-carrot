@@ -12,8 +12,8 @@ class MainScreens extends StatefulWidget {
 }
 
 class _MainScreensState extends State<MainScreens> {
-  int selectedIndex = 0;
-  List<int> loadPages = [0];
+  int selectedIndex = 2;
+  List<int> loadPages = [2];
 
   void selectBottomMenu(int index) {
     selectedIndex = index;

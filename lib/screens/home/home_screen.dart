@@ -24,6 +24,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               );
             },
+            // 그림 그리면서 데이터 전달하지 말것 (Riverpod 사용)
             child: ListItem(p: p),
           );
         },

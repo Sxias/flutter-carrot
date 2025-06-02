@@ -17,6 +17,7 @@ class NearMeScreen extends StatelessWidget {
       body: Column(
         children: [
           NearMeSearchBox(),
+          Spacer(),
           Wrap(
             children: [
               MMenu(Icon(Icons.person), "구인구직"),
@@ -27,11 +28,20 @@ class NearMeScreen extends StatelessWidget {
               MMenu(Icon(Icons.portrait), "전시/행사"),
             ],
           ),
-          Text(
-            "이웃들의 추천 가게",
-            style: textTheme().displayMedium,
+          Spacer(),
+          Padding(
+            padding: const EdgeInsets.only(left: 16),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "이웃들의 추천 가게",
+                style: textTheme().displayMedium,
+              ),
+            ),
           ),
-          Expanded(
+          Spacer(),
+          SizedBox(
+            height: 400,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
